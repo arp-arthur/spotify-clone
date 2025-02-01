@@ -5,9 +5,9 @@ import { AppContext } from "../../context/AppContext";
 
 const imageContext = require.context('../../assets/playlist', false, /\.(png|jpeg)$/);
 
-
-
 const PlayList = () => {
+
+    
 
     const { showResultsPlaylist, apiData } = useContext(AppContext);
 
@@ -59,14 +59,13 @@ const PlayList = () => {
             </div>
             ) : (
             <div id="result-artist">
+                <h2 className="topResults-title">Top Results</h2>
                 <div className="grid-container">
+                    
                     {apiData.map((data) => (
                         <div className="artist-card" id="">
                             <div className="card-img">
-                                <img alt="" id="artist-img" className="artist-img" src={data.urlImg} />
-                                <div className="play">
-                                    <span className="fa fa-solid fa-play"></span>
-                                </div>
+                                <img alt="" id="artist-img" className="artist-img" src={data.urlImg} />                                
                             </div>
                             <div className="downSide">                                    
                                 <div className="card-text">
@@ -80,7 +79,7 @@ const PlayList = () => {
                                 <div className="play">
                                     <button className="playButton">
                                         <span className="svgSpan">
-                                        <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                                            <svg data-encore-id="icon" width="30" height="30" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 bneLcE e-9541-icon" viewBox="0 0 24 24"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
                                         </span>
                                     </button>
                                 </div>
